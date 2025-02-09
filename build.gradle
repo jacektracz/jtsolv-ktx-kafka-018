@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.jtsolv'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2-SNAPSHOT'
 
 java {
 	toolchain {
@@ -27,14 +27,16 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-stream'
 	implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
 	implementation 'org.springframework.kafka:spring-kafka'
+	//implementation 'mysql:mysql-connector-java:5.1.45'
 	//implementation 'mysql:mysql-connector-java'
-	//implementation "mysql:mysql-connector-java:8.0.15"
+	implementation "mysql:mysql-connector-java:8.0.15"
 	//implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 	//runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.cloud:spring-cloud-stream-test-binder'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
 }
 
 dependencyManagement {

@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR file
-COPY build/libs/jtsolv-kafka-producer-0.0.1-SNAPSHOT.jar jtsolv-kafka-producer.jar
+COPY build/libs/jtsolv-kafka-producer-0.0.2-SNAPSHOT.jar jtsolv-kafka-producer-0.0.2.jar
 
 # Expose ports (8080 for REST API)
 EXPOSE 50777
@@ -14,4 +14,4 @@ EXPOSE 50777
 ENV KAFKA_BROKER=kafka-service:9092
 
 # Run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "jtsolv-kafka-producer.jar"]
+ENTRYPOINT ["java", "-jar", "jtsolv-kafka-producer-0.0.2.jar"]
